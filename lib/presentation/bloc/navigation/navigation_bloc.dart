@@ -1,11 +1,12 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'navigation_event.dart';
 import 'navigation_state.dart';
 
-import '../../screens/home.dart';
-import '../../screens/chats.dart';
-import '../../screens/profile.dart';
-import '../../screens/settings.dart';
+import '../../screens/chats_screen.dart';
+import '../../screens/home_screen.dart';
+import '../../screens/profile_screen.dart';
+import '../../screens/settings_screen.dart';
 
 class NavigationBloc extends Bloc<NavigationEvent, NavigationState> {
   NavigationBloc() : super(initialNavigationState) {

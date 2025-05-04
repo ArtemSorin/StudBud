@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'bloc/navigation/navigation_bloc.dart';
-import 'bloc/navigation/navigation_event.dart';
-import 'bloc/navigation/navigation_state.dart';
+import 'presentation/bloc/navigation/navigation_bloc.dart';
+import 'presentation/bloc/navigation/navigation_event.dart';
+import 'presentation/bloc/navigation/navigation_state.dart';
 
 void main() {
   runApp(const MainApp());

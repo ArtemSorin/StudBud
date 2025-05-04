@@ -1,47 +1,23 @@
 import 'package:flutter/material.dart';
 
-class ChatsScreen extends StatelessWidget {
-  const ChatsScreen({super.key});
+class ChatItem extends StatelessWidget {
+  final String avatarUrl;
+  final String name;
+  final String lastMessage;
+  final String time;
+  final bool isUnread;
+
+  const ChatItem({
+    super.key,
+    required this.avatarUrl,
+    required this.name,
+    required this.lastMessage,
+    required this.time,
+    required this.isUnread,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: ListView(
-          children: [
-            _buildChatItem(
-              avatarUrl: 'https://via.placeholder.com/50',
-              name: 'Иван Петров',
-              lastMessage: 'Привет, ты уже поступила во ВШЭ?',
-              time: '10:30',
-              isUnread: true,
-            ),
-            const Divider(),
-            _buildChatItem(
-              avatarUrl: 'https://via.placeholder.com/50',
-              name: 'Елена Морозова',
-              lastMessage: 'Я сдала математику.',
-              time: '9:15',
-              isUnread: false,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: Colors.black,
-        child: const Icon(Icons.edit, color: Colors.white),
-      ),
-    );
-  }
-
-  Widget _buildChatItem({
-    required String avatarUrl,
-    required String name,
-    required String lastMessage,
-    required String time,
-    required bool isUnread,
-  }) {
     return ListTile(
       leading: CircleAvatar(
         radius: 25,
